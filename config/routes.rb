@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
+  
   get 'static_pages/home'
 
   get 'static_pages/help'
@@ -17,5 +19,4 @@ Rails.application.routes.draw do
 
   get 'static_pages/create_an_account'
 
-  root 'application#hello'
 end
