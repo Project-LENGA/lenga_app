@@ -59,5 +59,4 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Create an Account, Ask Anything to your Senpai! #{@base_title}"
   end
-
 end
