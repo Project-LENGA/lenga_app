@@ -55,25 +55,36 @@ p {
 
 
 /* header */
-header ul li {
-  float: left;
-}
+header  {
+  ul li {
+    float: left;
+    .img-circular {
+      margin-top: 7px;
+      width: 44px;
+      height: 44px;
+      background-size: cover;
+      display: block;
+      border-radius: 44px;
+      -webkit-border-radius: 44px;
+      -moz-border-radius: 44px;
+    }
+  }
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
+  #logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
     color: white;
-    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
   }
 }
-
 /* footer */
 
 footer {
