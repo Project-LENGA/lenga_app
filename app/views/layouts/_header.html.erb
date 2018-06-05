@@ -17,10 +17,8 @@
                 <li class="divider"><%= link_to "Log Out", "#" %></li>
               </ul>
             </div>
-          <% end %>
-          <% unless current_user %>
-            <%= link_to "Sign in", user_facebook_omniauth_authorize_path %>
           <% else %>
+            <%= link_to "Sign in", user_facebook_omniauth_authorize_path %>
           <% end %>
           </li>
       </ul>
