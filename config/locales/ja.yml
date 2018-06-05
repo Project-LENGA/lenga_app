@@ -29,20 +29,20 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  message: "There are gonna be A LOT MORE in this page!!"
+ja:
+  message:              "LENGA開発中！乞うご期待"
   
-  about:              "What's LENGA?"
-  help:               "Help"
-  become_a_tutor:     "Become a Tutor"
-  signin:             "Sign Up"
-  contact:            "Contact Us"
-  security:           "Security"
-  terms:              "Terms"
-  tips:               "Tips"
-  sitemap:            "Sitemap"
+  about:                "LENGAってなに?"
+  help:                 "ヘルプ"
+  become_a_tutor:       "チューターになる"
+  signin:               "サインイン"
+  contact:              "お問い合わせ"
+  security:             "セキュリティ"
+  terms:                "利用規約"
+  tips:                 "ヒント"
+  sitemap:              "サイトマップ"
   
   static_pages:
     home:
-      welcome:        "Welcome to LENGA!"
-      sign_up:        "Sign Up with Facebook"
+      welcome:          "レンガへようこそ！"
+      sign_up:          "Facebookで登録"

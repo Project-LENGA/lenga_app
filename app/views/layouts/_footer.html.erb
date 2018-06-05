@@ -5,19 +5,19 @@
   <nav>
     <div >
       <ul>
-        <li><%= link_to "About",   about_path %></li>
-        <li><%= link_to "Contact", help_path %></li>
-        <li><%= link_to "Security", security_path %></li>
-        <li><%= link_to "terms",   terms_path %></li>
-        <li><%= link_to "tips",   tips_path %></li>
-        <li><%= link_to "help",   help_path %></li>
+        <li><%= link_to t(:about),   about_path %></li>
+        <li><%= link_to t(:contact), help_path %></li>
+        <li><%= link_to t(:security), security_path %></li>
+        <li><%= link_to t(:terms),   terms_path %></li>
+        <li><%= link_to t(:tips),   tips_path %></li>
+        <li><%= link_to t(:help),   help_path %></li>
       </ul>
     </div>
 
     <ul>
-      <li><%= link_to "Terms",     terms_path %></li>
-      <li><%= link_to "Privacy",   '#' %></li>
-      <li><%= link_to "sitemap",   sitemap_path %></li>
+      <li><%= link_to t(:terms),     terms_path %></li>
+      <li><%= link_to t(:tips),   '#' %></li>
+      <li><%= link_to t(:sitemap),   sitemap_path %></li>
     </ul>
   </nav>
 </footer>
