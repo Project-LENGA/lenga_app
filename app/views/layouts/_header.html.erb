@@ -3,9 +3,9 @@
     <%= link_to "LENGA", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "What's LENGA?",  about_path  %></li>
-        <li><%= link_to "Help",   help_path %></li>
-        <li><%= link_to "Become a Tutor", become_a_tutor_path %></li>
+        <li><%= link_to t(:about),  about_path  %></li>
+        <li><%= link_to t(:help),   help_path %></li>
+        <li><%= link_to t(:become_a_tutor), become_a_tutor_path %></li>
         <li>
           <% if current_user %>
             <div class="dropdown">
@@ -18,7 +18,7 @@
               </ul>
             </div>
           <% else %>
-            <%= link_to "Sign in", user_facebook_omniauth_authorize_path %>
+            <%= link_to t(:signin), user_facebook_omniauth_authorize_path %>
           <% end %>
           </li>
       </ul>
