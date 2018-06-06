@@ -9,12 +9,17 @@
         <li>
           <% if current_user %>
             <div class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <%= image_tag(current_user.image, class: "img-circular") %>
+              </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                <li class="divider"><%= link_to "My Session", "#" %></li>
-                <li class="divider"><%= link_to "Language & Currency", "#" %></li>
-                <li class="divider"><%= link_to "Setting", "#" %></li>
-                <li class="divider"><%= link_to "Log Out", "#" %></li>
+                <li><%= link_to "My Session", "#" %></li>
+                <li class="divider"></li>
+                <li><%= link_to "Language & Currency", "#" %></li>
+                <li class="divider"></li>
+                <li><%= link_to "Setting", "#" %></li>
+                <li class="divider"></li>
+                <li><%= link_to "Log Out", "#" %></li>
               </ul>
             </div>
           <% else %>
