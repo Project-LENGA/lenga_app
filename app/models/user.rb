@@ -16,6 +16,7 @@
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
 #  sign_in_count          :integer          default(0), not null
+#  tutor_activated        :boolean          default(FALSE)
 #  uid                    :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
@@ -32,6 +33,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, 
          :omniauthable, :omniauth_providers => [:facebook]
+  has_one :tutor, dependent: :destroy
          
   def self.new_with_session(params, session)
     super.tap do |user|
