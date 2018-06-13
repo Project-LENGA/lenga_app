@@ -11,4 +11,8 @@ Rails.application.routes.draw do
     get  '/terms',             to: 'static_pages#terms'
     get  '/create_an_account', to: 'static_pages#create_an_account'
   end
+
+  resources :tutors do
+    get 'dashboard'
+  end
 end
