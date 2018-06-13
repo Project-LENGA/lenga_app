@@ -53,10 +53,4 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Terms of Service #{@base_title}"
   end
-
-  test "should get create_an_account" do
-    get create_an_account_path
-    assert_response :success
-    assert_select "title", "Create an Account, Ask Anything to your Senpai! #{@base_title}"
-  end
 end
