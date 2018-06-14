@@ -9,6 +9,5 @@ Rails.application.routes.draw do
     get  '/become_a_tutor',    to: 'static_pages#become_a_tutor'
     get  '/tips',              to: 'static_pages#tips'
     get  '/terms',             to: 'static_pages#terms'
-    get  '/create_an_account', to: 'static_pages#create_an_account'
   end
 end
