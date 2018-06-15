@@ -16,7 +16,23 @@
 require 'test_helper'
 
 class TutorTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  include Devise::TestHelpers
+
+  def setup
+    @user = users(:jorn)
+  end
+
+  test "should be valid" do
+    @tutor.valid?
+  end
+
+  test "user_id should be present " do
+    @tutor.user_id = nil
+    assert_not @tutor
+  end
+
+  test "graduate_year should be present" do
+    @tutor.graduate_year = nil
+    assert_not @tutor
+  end
 end
