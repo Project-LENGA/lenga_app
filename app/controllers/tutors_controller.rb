@@ -9,9 +9,10 @@ class TutorsController < ApplicationController
   end
 
   def create
-    @tutor = current_user.tutor.build(tutor_params)
+    @tutor = current_user.build_tutor(tutor_params)
 
     if @tutor.save
+      current_user.activate_tutor
       redirect_to tutor_dashboard_url(@tutor)
     else
       render 'new'

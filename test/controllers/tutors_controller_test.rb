@@ -37,6 +37,8 @@ class TutorsControllerTest < ActionDispatch::IntegrationTest
         }
       }
     end
-    assert_redirected_to tutor_dashboard_path(@user)
+    @user.reload
+    assert @user.tutor_activated
+    assert_redirected_to tutor_dashboard_path(@user.tutor, locale: 'en')
   end
 end
