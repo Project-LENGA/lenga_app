@@ -13,4 +13,8 @@ Rails.application.routes.draw do
     get  '/tips',              to: 'static_pages#tips'
     get  '/terms',             to: 'static_pages#terms'
   end
+
+  resources :tutors do
+    get 'dashboard'
+  end
 end
