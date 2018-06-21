@@ -15,8 +15,12 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+one:
+  title:   Can I pay with any currency?
+  content: Yes you can use any currency for lenga as long as you are happy
 # column: value
 #
-two: {}
+two:
+  title:   What is the LENGA cancellation policy?
+  content: when you cancell it, I will be so sad.
 # column: value
