@@ -13,6 +13,14 @@ Rails.application.routes.draw do
     resources :tutors do
       get 'dashboard'
     end
+
+    resources :tutor_activations do
+      collection do
+        get 'register_email'
+        get 'send_confirmation_email'
+        get 'check_domain'
+      end
+    end
   end
 
 

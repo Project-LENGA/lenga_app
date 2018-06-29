@@ -15,8 +15,10 @@
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
+#  school_email           :string
 #  sign_in_count          :integer          default(0), not null
 #  tutor_activated        :boolean          default(FALSE)
+#  tutor_activation_token :string
 #  uid                    :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
