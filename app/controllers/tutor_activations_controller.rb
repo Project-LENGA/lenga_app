@@ -7,8 +7,10 @@ class TutorActivationsController < ApplicationController
   end
 
   def send_confirmation_email
-    if current_user.update_attributes(tutor_activations_params)
-      TutorActivationMailer.email_confirmation current_user
+    current_user.update_attributes(school_email: params[:email])
+
+    if current_user.create_tutor_activation_digest
+      TutorActivationMailer.email_confirmation(current_user).deliver_now
       redirect_to root_url
     else
       render 'register_email'
@@ -20,9 +22,4 @@ class TutorActivationsController < ApplicationController
 
     render json: { confirmed: confirmed }
   end
-
-  private
-    def tutor_activations_params
-      params.require(:user).permit(:school_email)
-    end
 end

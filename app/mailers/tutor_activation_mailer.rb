@@ -3,5 +3,6 @@ class TutorActivationMailer < ApplicationMailer
 
   def email_confirmation user
     @user = user
+    mail to: @user.school_email, subject: 'Lenga tutor activation'
   end
 end

@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20180629020535) do
     t.text "image"
     t.boolean "tutor_activated", default: false
     t.string "school_email"
-    t.string "tutor_activation_token"
+    t.string "tutor_activation_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

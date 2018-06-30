@@ -5,7 +5,12 @@ class TutorsController < ApplicationController
   end
 
   def new
-    @tutor = Tutor.new
+    if current_user.authenticate_tutor(params[:tutor_activation_token])
+      @tutor = Tutor.new
+      render 'new'
+    else
+      redirect_to root_url
+    end
   end
 
   def create

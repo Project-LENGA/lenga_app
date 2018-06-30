@@ -15,7 +15,6 @@
   var $emailInput = $('.email-input');
   var $submitButton = $('.submit-button');
 
-
   $checkDomainButton.on('click', function (e) {
     e.preventDefault();
 
@@ -23,7 +22,7 @@
       url: '/tutor_activations/check_domain',
       type: 'GET',
       data: {
-        email: $emailInput.val();
+        email: $emailInput.val()
       }
     })
       .done(function (d) {

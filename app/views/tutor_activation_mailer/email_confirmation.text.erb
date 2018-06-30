@@ -3,4 +3,4 @@ Thanks for applying for Tutor with Lenga!
 
 To continue on the registering process for tutor, click the link below.
 
-<%= tutor %>
+<%= new_tutor_url(tutor_activation_token: @user.tutor_activation_token) %>
