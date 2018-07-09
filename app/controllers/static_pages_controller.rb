@@ -1,3 +1,5 @@
+require 'koala'
+
 class StaticPagesController < ApplicationController
   def home
   end
@@ -24,5 +26,13 @@ class StaticPagesController < ApplicationController
   end
 
   def create_an_account
+  end
+
+  def koala_test
+    graph = Koala::Facebook::API.new(current_user.facebook_access_token)
+    profile = graph.get_object('me?fields=email,education', api_version: '2.0')
+    render json: {
+      profile: profile,
+    }
   end
 end
