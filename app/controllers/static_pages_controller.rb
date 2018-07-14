@@ -25,4 +25,8 @@ class StaticPagesController < ApplicationController
 
   def create_an_account
   end
+
+  def react_test
+    @title = 'react no test desu'
+  end
 end
