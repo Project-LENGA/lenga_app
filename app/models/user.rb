@@ -34,6 +34,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, 
          :omniauthable, :omniauth_providers => [:facebook]
   has_one :tutor, dependent: :destroy
+  has_one :student, dependent: :destroy
          
   def self.new_with_session(params, session)
     super.tap do |user|
