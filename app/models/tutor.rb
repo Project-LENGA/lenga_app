@@ -2,11 +2,19 @@
 #
 # Table name: tutors
 #
-#  id            :integer          not null, primary key
-#  graduate_year :date
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#  user_id       :integer
+#  id                     :integer          not null, primary key
+#  birth_date             :date
+#  gender                 :integer
+#  nickname               :string
+#  processed_visa_by_self :boolean
+#  profile_comment        :string
+#  school_email           :string
+#  tutor_email            :string
+#  used_agent             :boolean
+#  used_agent_name        :string
+#  created_at             :datetime         not null
+#  updated_at             :datetime         not null
+#  user_id                :integer
 #
 # Indexes
 #
@@ -16,5 +24,6 @@
 class Tutor < ApplicationRecord
   belongs_to :user
 
-  validates :graduate_year, presence: true
+  validates :school_email, presence: true
+  validates :gender, presence: true
 end

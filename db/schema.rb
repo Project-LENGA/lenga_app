@@ -20,7 +20,15 @@ ActiveRecord::Schema.define(version: 20180629020535) do
   end
 
   create_table "tutors", force: :cascade do |t|
-    t.date "graduate_year"
+    t.string "nickname"
+    t.string "tutor_email"
+    t.string "school_email"
+    t.integer "gender"
+    t.date "birth_date"
+    t.boolean "used_agent"
+    t.string "used_agent_name"
+    t.boolean "processed_visa_by_self"
+    t.string "profile_comment"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
