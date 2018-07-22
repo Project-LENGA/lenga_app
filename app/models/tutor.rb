@@ -3,13 +3,9 @@
 # Table name: tutors
 #
 #  id                     :integer          not null, primary key
-#  birth_date             :date
-#  gender                 :integer
-#  nickname               :string
 #  processed_visa_by_self :boolean
 #  profile_comment        :string
 #  school_email           :string
-#  tutor_email            :string
 #  used_agent             :boolean
 #  used_agent_name        :string
 #  created_at             :datetime         not null
@@ -25,5 +21,4 @@ class Tutor < ApplicationRecord
   belongs_to :user
 
   validates :school_email, presence: true
-  validates :gender, presence: true
 end

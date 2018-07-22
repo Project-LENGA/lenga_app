@@ -19,7 +19,6 @@ class TutorsController < ApplicationController
     @tutor = current_user.build_tutor(tutor_params)
 
     if @tutor.save
-      debugger
       current_user.activate_tutor
       redirect_to tutor_dashboard_url(@tutor)
     else
@@ -29,6 +28,6 @@ class TutorsController < ApplicationController
 
   private
     def tutor_params
-      params.require(:tutor).permit(:nickname, :tutor_email, :school_email, :gender, :birth_date, :used_agent, :used_agent_name, :processed_visa_by_self, :profile_comment)
+      params.require(:tutor).permit(:school_email, :used_agent, :used_agent_name, :processed_visa_by_self, :profile_comment)
     end
 end
