@@ -7,6 +7,7 @@
 #  current_sign_in_ip      :string
 #  email                   :string           default(""), not null
 #  encrypted_password      :string           default(""), not null
+#  facebook_access_token   :string
 #  image                   :text
 #  last_sign_in_at         :datetime
 #  last_sign_in_ip         :string
@@ -36,6 +37,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, 
          :omniauthable, :omniauth_providers => [:facebook]
   has_one :tutor, dependent: :destroy
+  has_one :student, dependent: :destroy
   attr_accessor :tutor_activation_token
          
   def self.new_with_session(params, session)
