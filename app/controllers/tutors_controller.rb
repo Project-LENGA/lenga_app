@@ -2,10 +2,17 @@ class TutorsController < ApplicationController
   before_action :authenticate_user!
 
   def dashboard
+    @tutor = current_user.tutor
   end
 
   def new
-    @tutor = Tutor.new
+    if current_user.authenticate_tutor(params[:tutor_activation_token])
+      @tutor = Tutor.new
+      @tutor.school_email = current_user.school_email
+      render 'new'
+    else
+      redirect_to root_url
+    end
   end
 
   def create
@@ -21,6 +28,6 @@ class TutorsController < ApplicationController
 
   private
     def tutor_params
-      params.require(:tutor).permit(:graduate_year)
+      params.require(:tutor).permit(:school_email, :used_agent, :used_agent_name, :processed_visa_by_self, :profile_comment)
     end
 end

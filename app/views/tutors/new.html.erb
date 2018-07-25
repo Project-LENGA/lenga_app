@@ -2,8 +2,52 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@tutor) do |f| %>
 
-      <%= f.label :graduate_year %>
-      <%= f.date_select :graduate_year, class: 'form-control', discard_day: true %>
+      <table>
+        <tr>
+          <th><%= f.label :school_email %></th>
+          <td><%= f.text_field :school_email %></td>
+        </tr>
+
+
+        <tr>
+          <td>出身地 comes here</td>
+        </tr>
+
+        <tr>
+          <td>在籍大学 comes here</td>
+        </tr>
+
+        <tr>
+          <td>国籍 comes here</td>
+        </tr>
+
+        <tr>
+          <td>使用言語 comes here</td>
+        </tr>
+
+
+        <tr>
+          <th><%= f.label :used_agent %></th>
+          <td><%= f.check_box :used_agent %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :used_agent_name %></th>
+          <td><%= f.text_field :used_agent_name %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :processed_visa_by_self %></th>
+          <td><%= f.check_box :processed_visa_by_self %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :profile_comment %></th>
+          <td><%= f.text_area :profile_comment %></td>
+        </tr>
+
+      </table>
+
 
       <%= f.submit 'Register as Tutor!', class: 'btn btn-primary' %>
     <% end %>
