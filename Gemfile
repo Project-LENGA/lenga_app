@@ -10,6 +10,7 @@ gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 gem 'bcrypt',       '~> 3.1.7'
+gem 'sprockets',    '~> 3.7.2'
 gem 'webpacker'
 
 group :development, :test do
