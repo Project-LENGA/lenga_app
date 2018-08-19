@@ -4,6 +4,7 @@ import {
   Route,
 } from 'react-router-dom'
 import LandingPage from './components/landingPage';
+import './assets/stylesheets/app.css';
 const App = (props) => (
   <Router>
     <div>

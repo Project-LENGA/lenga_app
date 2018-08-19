@@ -8,7 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 import React from 'react';
 import { render } from 'react-dom';
-import SampleComponent from '../components/SampleComponent';
+// import SampleComponent from '../lengaApp/components/SampleComponent';
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.body.appendChild(document.createElement('div'));
