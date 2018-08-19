@@ -7,7 +7,6 @@
 #  current_sign_in_ip      :string
 #  email                   :string           default(""), not null
 #  encrypted_password      :string           default(""), not null
-#  facebook_access_token   :string
 #  image                   :text
 #  last_sign_in_at         :datetime
 #  last_sign_in_ip         :string

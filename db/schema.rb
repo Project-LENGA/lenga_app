@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180708145021) do
+ActiveRecord::Schema.define(version: 20180629020535) do
 
   create_table "articles", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -58,7 +58,6 @@ ActiveRecord::Schema.define(version: 20180708145021) do
     t.boolean "tutor_activated", default: false
     t.string "school_email"
     t.string "tutor_activation_digest"
-    t.string "facebook_access_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
