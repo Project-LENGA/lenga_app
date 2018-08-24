@@ -7,8 +7,8 @@
 #  current_sign_in_ip      :string
 #  email                   :string           default(""), not null
 #  encrypted_password      :string           default(""), not null
-#  facebook_access_token   :string
 #  image                   :text
+#  language                :integer          default(0)
 #  last_sign_in_at         :datetime
 #  last_sign_in_ip         :string
 #  name                    :string
@@ -39,6 +39,8 @@ class User < ApplicationRecord
   has_one :tutor, dependent: :destroy
   has_one :student, dependent: :destroy
   attr_accessor :tutor_activation_token
+
+  enum language: {japanese: 0, united_states: 1, united_kingdom: 2, canada: 3}
          
   def self.new_with_session(params, session)
     super.tap do |user|

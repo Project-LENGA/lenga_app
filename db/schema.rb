@@ -10,13 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180708145021) do
+ActiveRecord::Schema.define(version: 20180816000311) do
 
   create_table "articles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "content"
     t.string "title"
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "country"
+    t.string "state"
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "students", force: :cascade do |t|
@@ -58,7 +72,7 @@ ActiveRecord::Schema.define(version: 20180708145021) do
     t.boolean "tutor_activated", default: false
     t.string "school_email"
     t.string "tutor_activation_digest"
-    t.string "facebook_access_token"
+    t.integer "language", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

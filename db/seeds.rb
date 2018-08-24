@@ -9,3 +9,8 @@
 
 Article.create(title: 'Can I pay with any currency?', content: 'Yes you can use any currency for lenga as long as you are happy')
 Article.create(title: 'What is the LENGA cancellation policy?', content: 'when you cancell it, I will be so sad.')
+
+Language.delete_all
+User.languages.each do |name, id|
+  Language.create(id: id, name: name)
+end
