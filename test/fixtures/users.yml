@@ -8,7 +8,7 @@
 #  email                   :string           default(""), not null
 #  encrypted_password      :string           default(""), not null
 #  image                   :text
-#  language                :integer          default(0)
+#  language                :integer          default("japanese")
 #  last_sign_in_at         :datetime
 #  last_sign_in_ip         :string
 #  name                    :string
@@ -20,6 +20,7 @@
 #  sign_in_count           :integer          default(0), not null
 #  tutor_activated         :boolean          default(FALSE)
 #  tutor_activation_digest :string
+#  type                    :string
 #  uid                     :string
 #  created_at              :datetime         not null
 #  updated_at              :datetime         not null
