@@ -9,13 +9,8 @@ class HelpCenter extends React.Component {
   }
 }
 
-// ReactDOM.render(
-//   <HelpCenter />, document.getElementById('help')
-// );
-
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <HelpCenter />,
-    document.body.appendChild(document.createElement('div'))
-  )
+    <HelpCenter />, document.getElementById('help')
+  );
 });
