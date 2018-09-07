@@ -8,7 +8,7 @@
 #  email                   :string           default(""), not null
 #  encrypted_password      :string           default(""), not null
 #  image                   :text
-#  language                :integer          default("japanese")
+#  language                :integer          default(0)
 #  last_sign_in_at         :datetime
 #  last_sign_in_ip         :string
 #  name                    :string
@@ -37,8 +37,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, 
          :omniauthable, :omniauth_providers => [:facebook]
-  # has_one :tutor, dependent: :destroy
-  # has_one :student, dependent: :destroy
+
   attr_accessor :tutor_activation_token
   
 
