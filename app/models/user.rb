@@ -20,6 +20,7 @@
 #  sign_in_count           :integer          default(0), not null
 #  tutor_activated         :boolean          default(FALSE)
 #  tutor_activation_digest :string
+#  type                    :string
 #  uid                     :string
 #  created_at              :datetime         not null
 #  updated_at              :datetime         not null
@@ -36,9 +37,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, 
          :omniauthable, :omniauth_providers => [:facebook]
-  has_one :tutor, dependent: :destroy
-  has_one :student, dependent: :destroy
+
   attr_accessor :tutor_activation_token
+  
 
   enum language: {japanese: 0, united_states: 1, united_kingdom: 2, canada: 3}
          
