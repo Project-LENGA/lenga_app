@@ -1,6 +1,8 @@
 {
-  "application.js": "/packs/application-a04fa5779778c32a607b.js",
-  "application.js.map": "/packs/application-a04fa5779778c32a607b.js.map",
-  "hello_react.js": "/packs/hello_react-a13d502420683c5babfe.js",
-  "hello_react.js.map": "/packs/hello_react-a13d502420683c5babfe.js.map"
+  "HelpCenter.js": "/packs/HelpCenter-a581bace1ff8a3627e23.js",
+  "HelpCenter.js.map": "/packs/HelpCenter-a581bace1ff8a3627e23.js.map",
+  "application.js": "/packs/application-adb20fd40509b70e9ebb.js",
+  "application.js.map": "/packs/application-adb20fd40509b70e9ebb.js.map",
+  "hello_react.js": "/packs/hello_react-55508286ec3e79216e48.js",
+  "hello_react.js.map": "/packs/hello_react-55508286ec3e79216e48.js.map"
 }
