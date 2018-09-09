@@ -8,7 +8,7 @@
 #  email                   :string           default(""), not null
 #  encrypted_password      :string           default(""), not null
 #  image                   :text
-#  language                :integer          default(0)
+#  language                :integer          default("japanese")
 #  last_sign_in_at         :datetime
 #  last_sign_in_ip         :string
 #  name                    :string

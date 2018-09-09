@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 20180902062053) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.string "country"
+    t.string "state"
+    t.string "city"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "students", force: :cascade do |t|
     t.integer "user_id"
     t.datetime "created_at", null: false
