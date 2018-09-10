@@ -1,0 +1,48 @@
+{
+  "todos": [
+    {
+      "title": "do next task",
+      "done": false
+    },
+    {
+      "title": "do previous task",
+      "done": false
+    },
+    {
+      "title": "go shopping",
+      "done": false
+    },
+    {
+      "title": "go shopping",
+      "done": true
+    },
+    {
+      "title": "buy cable",
+      "done": false
+    },
+    {
+      "title": "meet friends",
+      "done": false
+    },
+    {
+      "title": "drink tea",
+      "done": false
+    },
+    {
+      "title": "go to store",
+      "done": false
+    },
+    {
+      "title": "do next task",
+      "done": false
+    },
+    {
+      "title": "do next task",
+      "done": false
+    },
+    {
+      "title": "do next task",
+      "done": false
+    }
+  ]
+}

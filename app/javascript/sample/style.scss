@@ -1,0 +1,17 @@
+.todos {
+
+  &__list {
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+
+  &__elem {
+    padding: 1rem;
+    background-color: #fafafa;
+    border-bottom: 1px solid grey;
+
+    &__title {
+      padding-left: 1rem;
+    }
+  }
+}

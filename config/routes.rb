@@ -22,6 +22,9 @@ Rails.application.routes.draw do
         get 'check_domain'
       end
     end
+
+    get 'sample/todos', to: 'todos#index'
+    get 'sample/todos/get_all_todos', to: 'todos#get_all_todos'
   end
 
 
